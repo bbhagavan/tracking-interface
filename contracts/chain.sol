@@ -15,17 +15,19 @@ contract Chain {
     event ProductStateChanged(uint indexed productId, State state);
 
     // Function to create a new product
-    function createProduct(string memory _name) public {
+    function createProduct(string memory _name) public returns (Product memory) {
         productCount++;
         products[productCount] = Product(productCount, _name, State.Manufacture);
         emit ProductStateChanged(productCount, State.Manufacture);
+        return products[productCount];
     }
 
     // Function to move the product to the 'InTransit' state
-    function moveToTransit(uint productId) public {
+    function moveToTransit(uint productId) public returns (Product memory) {
         require(products[productId].state == State.Manufacture, "Product must be in the 'Manufacture' state to move to 'Transit'.");
         products[productId].state = State.InTransit;
         emit ProductStateChanged(productId, State.InTransit);
+        return products[productId];
     }
 
     function deliverProduct(uint productId) public {

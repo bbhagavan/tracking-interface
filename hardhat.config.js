@@ -7,7 +7,7 @@ module.exports = {
   networks: {
     ganache: {
       url: "http://127.0.0.1:7545",
-      accounts: ["0x1c5a454d183568388a4eec9b9c4766e3e01d7f9f15fcb14c3961d2c402362926"]
+      accounts: ["0x235c7e18c97317ad06b9c0402465836268d4ac937f4513232fcadd8f32452080"]
     },
     hardhat: {
       chainId: 5777

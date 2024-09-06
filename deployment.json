@@ -1,5 +1,5 @@
 {
-  "address": "0x81E2A73583AC399F71243A5D164213A8F5776e97",
+  "address": "0x0FCb73fdEC0a131CBEC973406adCb393DF899600",
   "abi": [
     {
       "anonymous": false,
@@ -29,7 +29,30 @@
         }
       ],
       "name": "createProduct",
-      "outputs": [],
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "internalType": "enum Chain.State",
+              "name": "state",
+              "type": "uint8"
+            }
+          ],
+          "internalType": "struct Chain.Product",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
       "stateMutability": "nonpayable",
       "type": "function"
     },

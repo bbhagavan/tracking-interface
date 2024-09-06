@@ -59,7 +59,7 @@ export default function App(props) {
       setSupplyChain(
         new web3Obj.eth.Contract(
             supplyChainJson.abi,
-            '0x81E2A73583AC399F71243A5D164213A8F5776e97'
+            '0x0FCb73fdEC0a131CBEC973406adCb393DF899600'
         )
       );
 
